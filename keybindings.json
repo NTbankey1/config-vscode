@@ -1,0 +1,142 @@
+[
+  // Explorer
+  {
+    "key": "l",
+    "command": "list.toggleExpand",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "c",
+    "command": "copyFilePath",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "o",
+    "command": "revealFileInOS",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "tab",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "!editorTextFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "-list.focusUp",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+k o",
+    "command": "workbench.action.files.openFile",
+    "when": "true"
+  },
+  // Windows
+  {
+    "key": "tab",
+    "command": "workbench.action.focusNextGroup",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  {
+    "key": "shift+tab",
+    "command": "workbench.action.focusPreviousGroup",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  // Search
+  {
+    "key": "ctrl+k r",
+    "command": "workbench.action.openRecent"
+  },
+  {
+    "key": "alt+w",
+    "command": "vscode-neovim.send-cmdline",
+    "args": "<A-w>",
+    "when": "neovim.init && neovim.mode == 'cmdline'"
+  },
+  {
+    "key": "alt+c",
+    "command": "vscode-neovim.send-cmdline",
+    "args": "<A-c>",
+    "when": "neovim.init && neovim.mode == 'cmdline'"
+  },
+  {
+    "key": "alt+r",
+    "command": "vscode-neovim.send-cmdline",
+    "args": "<A-r>",
+    "when": "neovim.init && neovim.mode == 'cmdline'"
+  },
+  // Motions
+  {
+    "key": "enter",
+    "command": "vscode-neovim.send",
+    "args": "<CR>",
+    "when": "editorTextFocus && neovim.init && (neovim.mode == 'normal' || neovim.mode == 'visual')"
+  },
+  // Operation
+  {
+    "key": "ctrl+k",
+    "command": "vscode-neovim.send",
+    "args": "<C-K>",
+    "when": "editorTextFocus && neovim.ctrlKeysInsert.k && neovim.init && neovim.mode == 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
+  },
+  {
+    "key": "alt+d",
+    "command": "vscode-neovim.send",
+    "args": "<A-d>",
+    "when": "editorTextFocus && neovim.init"
+  },
+  {
+    "key": "alt+c",
+    "command": "vscode-neovim.send",
+    "args": "<A-c>",
+    "when": "editorTextFocus && neovim.init && (neovim.mode == 'normal' || neovim.mode == 'visual')"
+  },
+  {
+    "key": "alt+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "vscode-neovim.send",
+    "args": "<C-S-J>",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "vscode-neovim.send",
+    "args": "<C-S-K>",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "editor.action.moveSelectionToNextFindMatch",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "vscode-neovim.send",
+    "args": "<C-S-L>",
+    "when": "editorTextFocus && neovim.init"
+  },
+  // Language
+  {
+    "key": "ctrl+n",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible && !editorHasSelection && neovim.init && neovim.mode == 'insert'"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible && neovim.init && neovim.mode == 'insert'"
+  },
+  // {
+  //   "key": "tab",
+  //   "command": "-acceptSelectedSuggestion",
+  //   "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
+  // }
+]
