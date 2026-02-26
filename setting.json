@@ -1,96 +1,276 @@
 {
-
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.fontFamily": "Input Mono, monospace",
+  // ===== CORE EDITOR SETTINGS =====
+  "editor.fontFamily": "'Fira Code', 'JetBrains Mono', Consolas, monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.lineHeight": 1.5,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll": "explicit"
+  },
+  // ===== VISUAL ENHANCEMENTS =====
+  "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
-  "editor.lineNumbers": "on",
+  "editor.guides.indentation": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.minimap.enabled": true,
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
   "editor.renderWhitespace": "boundary",
-  "window.autoDetectColorScheme": true,
-  "workbench.colorTheme": "Vitesse Dark",
+  "editor.renderControlCharacters": false,
+  "editor.inlayHints.enabled": "on",
+  "editor.semanticHighlighting.enabled": true,
+  // ===== SUGGESTIONS & INTELLISENSE =====
+  "editor.suggestSelection": "first",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.parameterHints.enabled": true,
+  "editor.hover.delay": 300,
+  // ===== SEARCH & FIND =====
+  "editor.find.seedSearchStringFromSelection": "always",
+  "editor.find.autoFindInSelection": "multiline",
+  // ===== WORKBENCH SETTINGS =====
   "workbench.editor.tabActionLocation": "left",
   "workbench.fontAliasing": "antialiased",
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.list.smoothScrolling": true,
-  "workbench.preferredDarkColorTheme": "Vitesse Dark",
-  "workbench.preferredLightColorTheme": "Vitesse Light",
-  "workbench.productIconTheme": "icons-carbon",
-  "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.expandMode": "singleClick",
-  "workbench.tree.indent": 10,
-
- 
-  "debug.onTaskErrors": "debugAnyway",
-  "diffEditor.ignoreTrimWhitespace": false,
-  "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
-  "editor.find.addExtraSpaceOnTop": false,
-  "editor.inlineSuggest.enabled": true,
-  "editor.multiCursorModifier": "ctrlCmd",
-  "editor.suggestSelection": "first",
-  "editor.tabSize": 2,
-  "editor.unicodeHighlight.invisibleCharacters": false,
-  "editor.stickyScroll.enabled": true,
-  "editor.hover.sticky": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "never",
-    "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never"
-  },
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "files.eol": "\n",
-  "files.insertFinalNewline": true,
-  "files.simpleDialog.enable": true,
-  "git.autofetch": true,
-  "git.confirmSync": false,
-  "git.enableSmartCommit": true,
-  "git.untrackedChanges": "separate",
-  "scm.diffDecorationsGutterWidth": 2,
-  "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.fontWeight": "300",
-  "terminal.integrated.persistentSessionReviveProcess": "never",
-  "terminal.integrated.tabs.enabled": true,
+  "workbench.tree.indent": 12,
   "workbench.editor.closeOnFileDelete": true,
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": true,
-  "workbench.editor.limit.value": 5,
-  "search.exclude": {
-    "**/*.snap": true,
-    "**/*.svg": true,
-    "**/.git": true,
-    "**/.github": false,
-    "**/.nuxt": true,
-    "**/.output": true,
-    "**/.pnpm": true,
-    "**/.vscode": true,
-    "**/.yarn": true,
-    "**/assets": true,
-    "**/bower_components": true,
-    "**/dist/**": true,
-    "**/logs": true,
-    "**/node_modules": true,
-    "**/out/**": true,
-    "**/package-lock.json": true,
-    "**/pnpm-lock.yaml": true,
-    "**/public": true,
-    "**/temp": true,
-    "**/yarn.lock": true,
-    "**/CHANGELOG*": true,
-    "**/LICENSE*": true
-  },
-
-
+  "workbench.editor.limit.value": 8,
+  "workbench.editor.enablePreview": false,
+  "workbench.sideBar.location": "right",
+  // ===== WINDOW SETTINGS =====
   "window.dialogStyle": "custom",
-  "window.nativeTabs": true, 
-  "window.title": "${rootName}", 
+  "window.nativeTabs": true,
+  "window.title": "${rootName}",
   "window.titleBarStyle": "custom",
+  "window.customTitleBarVisibility": "never",
+  // ===== DEBUG & DIFF SETTINGS =====
+  "debug.onTaskErrors": "debugAnyway",
+  "diffEditor.ignoreTrimWhitespace": false,
+  // ===== EXPLORER SETTINGS =====
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "*.asax": "$(capture).*.cs, $(capture).*.vb",
+    "*.ascx": "$(capture).*.cs, $(capture).*.vb",
+    "*.ashx": "$(capture).*.cs, $(capture).*.vb",
+    "*.aspx": "$(capture).*.cs, $(capture).*.vb",
+    "*.bloc.dart": "$(capture).event.dart, $(capture).state.dart",
+    "*.c": "$(capture).h",
+    "*.cc": "$(capture).hpp, $(capture).h, $(capture).hxx",
+    "*.cjs": "$(capture).cjs.map, $(capture).*.cjs, $(capture)_*.cjs",
+    "*.component.ts": "$(capture).component.html, $(capture).component.spec.ts, $(capture).component.css, $(capture).component.scss, $(capture).component.sass, $(capture).component.less",
+    "*.cpp": "$(capture).hpp, $(capture).h, $(capture).hxx",
+    "*.cs": "$(capture).*.cs",
+    "*.cshtml": "$(capture).cshtml.cs",
+    "*.csproj": "*.config, *proj.user, appsettings.*, bundleconfig.json",
+    "*.css": "$(capture).css.map, $(capture).*.css",
+    "*.cxx": "$(capture).hpp, $(capture).h, $(capture).hxx",
+    "*.dart": "$(capture).freezed.dart, $(capture).g.dart",
+    "*.ex": "$(capture).html.eex, $(capture).html.heex, $(capture).html.leex",
+    "*.go": "$(capture)_test.go, $(capture).gen.go",
+    "*.py": "$(capture)_test.py, $(capture).pyi, $(capture).pyw",
+    "*.java": "$(capture).class",
+    "*.js": "$(capture).js.map, $(capture).*.js, $(capture)_*.js",
+    "*.jsx": "$(capture).js, $(capture).*.jsx, $(capture)_*.js, $(capture)_*.jsx",
+    "*.master": "$(capture).*.cs, $(capture).*.vb",
+    "*.mjs": "$(capture).mjs.map, $(capture).*.mjs, $(capture)_*.mjs",
+    "*.module.ts": "$(capture).resolver.ts, $(capture).controller.ts, $(capture).service.ts",
+    "*.pubxml": "$(capture).pubxml.user",
+    "*.resx": "$(capture).*.resx, $(capture).designer.cs, $(capture).designer.vb",
+    "*.tex": "$(capture).acn, $(capture).acr, $(capture).alg, $(capture).aux, $(capture).bbl, $(capture).blg, $(capture).fdb_latexmk, $(capture).fls, $(capture).glg, $(capture).glo, $(capture).gls, $(capture).idx, $(capture).ind, $(capture).ist, $(capture).lof, $(capture).log, $(capture).lot, $(capture).out, $(capture).pdf, $(capture).synctex.gz, $(capture).toc, $(capture).xdv",
+    "*.ts": "$(capture).js, $(capture).d.ts.map, $(capture).*.ts, $(capture)_*.js, $(capture)_*.ts",
+    "*.tsx": "$(capture).ts, $(capture).*.tsx, $(capture)_*.ts, $(capture)_*.tsx",
+    "*.vbproj": "*.config, *proj.user, appsettings.*, bundleconfig.json",
+    "*.vue": "$(capture).*.ts, $(capture).*.js, $(capture).story.vue",
+    "*.xaml": "$(capture).xaml.cs",
+    "+layout.svelte": "+layout.ts,+layout.ts,+layout.js,+layout.server.ts,+layout.server.js,+layout.gql",
+    "+page.svelte": "+page.server.ts,+page.server.js,+page.ts,+page.js,+page.gql",
+    ".clang-tidy": ".clang-format, .clangd, compile_commands.json",
+    ".env": "*.env, .env.*, .envrc, env.d.ts",
+    ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
+    ".project": ".classpath",
+    "BUILD.bazel": "*.bzl, *.bazel, *.bazelrc, bazel.rc, .bazelignore, .bazelproject, WORKSPACE",
+    "CMakeLists.txt": "*.cmake, *.cmake.in, .cmake-format.yaml, CMakePresets.json",
+    "I*.cs": "$(capture).cs",
+    "artisan": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, server.php, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, webpack.mix.js, windi.config.*",
+    "astro.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
+    "cargo.toml": ".clippy.toml, .rustfmt.toml, cargo.lock, clippy.toml, cross.toml, rust-toolchain.toml, rustfmt.toml",
+    "composer.json": ".php*.cache, composer.lock, phpunit.xml*, psalm*.xml",
+    "default.nix": "shell.nix",
+    "deno.json*": "*.env, .env.*, .envrc, api-extractor.json, deno.lock, env.d.ts, import-map.json, import_map.json, jsconfig.*, tsconfig.*, tsdoc.*",
+    "dockerfile": ".dockerignore, docker-compose.*, dockerfile*",
+    "flake.nix": "flake.lock",
+    "gatsby-config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, gatsby-browser.*, gatsby-node.*, gatsby-ssr.*, gatsby-transformer.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
+    "gemfile": ".ruby-version, gemfile.lock",
+    "go.mod": ".air*, go.sum, go.work",
+    "go.work": "go.work.sum",
+    "mix.exs": ".credo.exs, .dialyzer_ignore.exs, .formatter.exs, .iex.exs, .tool-versions, mix.lock",
+    "next.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, next-env.d.ts, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
+    "nuxt.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
+    "package.json": ".browserslist*, .circleci*, .commitlint*, .cz-config.js, .czrc, .dlint.json, .dprint.json, .editorconfig, .eslint*, .firebase*, .flowconfig, .github*, .gitlab*, .gitpod*, .huskyrc*, .jslint*, .lintstagedrc*, .markdownlint*, .node-version, .nodemon*, .npm*, .nvmrc, .pm2*, .pnp.*, .pnpm*, .prettier*, .releaserc*, .sentry*, .simple-git-hooks*, .stackblitz*, .styleci*, .stylelint*, .tazerc*, .textlint*, .tool-versions, .travis*, .versionrc*, .vscode*, .watchman*, .xo-config*, .yamllint*, .yarnrc*, Procfile, apollo.config.*, appveyor*, azure-pipelines*, bower.json, build.config.*, commitlint*, crowdin*, dangerfile*, dlint.json, dprint.json, eslint*, firebase.json, grunt*, gulp*, jenkins*, lerna*, lint-staged*, nest-cli.*, netlify*, nodemon*, npm-shrinkwrap.json, nx.*, package-lock.json, package.nls*.json, phpcs.xml, pm2.*, pnpm*, prettier*, pullapprove*, pyrightconfig.json, release-tasks.sh, release.config.*, renovate*, rollup.config.*, rspack*, simple-git-hooks*, stylelint*, tslint*, tsup.config.*, turbo*, typedoc*, unlighthouse*, vercel*, vetur.config.*, webpack*, workspace.json, xo.config.*, yarn*",
+    "pubspec.yaml": ".metadata, .packages, all_lint_rules.yaml, analysis_options.yaml, build.yaml, pubspec.lock, pubspec_overrides.yaml",
+    "pyproject.toml": ".pdm.toml, pdm.lock, pyproject.toml, poetry.lock, Pipfile, Pipfile.lock, requirements*.txt, setup.py, setup.cfg, MANIFEST.in",
+    "tsconfig.json": "tsconfig.*.json, jsconfig.json, jsconfig.*.json",
+    "quasar.conf.js": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, quasar.extensions.json, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
+    "readme*": "authors, backers*, changelog*, citation*, code_of_conduct*, codeowners, contributing*, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors*",
+    "remix.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, remix.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
+    "rush.json": ".browserslist*, .circleci*, .commitlint*, .cz-config.js, .czrc, .dlint.json, .dprint.json, .editorconfig, .eslint*, .firebase*, .flowconfig, .github*, .gitlab*, .gitpod*, .huskyrc*, .jslint*, .lintstagedrc*, .markdownlint*, .node-version, .nodemon*, .npm*, .nvmrc, .pm2*, .pnp.*, .pnpm*, .prettier*, .releaserc*, .sentry*, .simple-git-hooks*, .stackblitz*, .styleci*, .stylelint*, .tazerc*, .textlint*, .tool-versions, .travis*, .versionrc*, .vscode*, .watchman*, .xo-config*, .yamllint*, .yarnrc*, Procfile, apollo.config.*, appveyor*, azure-pipelines*, bower.json, build.config.*, commitlint*, crowdin*, dangerfile*, dlint.json, dprint.json, eslint*, firebase.json, grunt*, gulp*, jenkins*, lerna*, lint-staged*, nest-cli.*, netlify*, nodemon*, npm-shrinkwrap.json, nx.*, package-lock.json, package.nls*.json, phpcs.xml, pm2.*, pnpm*, prettier*, pullapprove*, pyrightconfig.json, release-tasks.sh, release.config.*, renovate*, rollup.config.*, rspack*, simple-git-hooks*, stylelint*, tslint*, tsup.config.*, turbo*, typedoc*, unlighthouse*, vercel*, vetur.config.*, webpack*, workspace.json, xo.config.*, yarn*",
+    "shims.d.ts": "*.d.ts",
+    "svelte.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, houdini.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, mdsvex.config.js, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vite.config.*, vitest.config.*, webpack.config.*, windi.config.*",
+    "vite.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
+    "vue.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*"
+  },
+  // ===== FILE SETTINGS =====
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.simpleDialog.enable": true,
+  // ===== GIT SETTINGS =====
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.untrackedChanges": "separate",
+  "git.ignoreRebaseWarning": true,
+  "git.replaceTagsWhenPull": true,
+  // ===== SCM SETTINGS =====
+  "scm.diffDecorationsGutterWidth": 2,
+  // ===== TERMINAL SETTINGS - OPTIMIZED FOR ZSH =====
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorWidth": 1,
+  "terminal.integrated.fontFamily": "'Fira Code', 'JetBrains Mono', 'Cascadia Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', Consolas, 'Courier New', monospace",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.fontWeight": "400",
+  "terminal.integrated.lineHeight": 1.1,
+  "terminal.integrated.letterSpacing": 0.2,
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.fastScrollSensitivity": 4,
+  "terminal.integrated.mouseWheelScrollSensitivity": 3,
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.rightClickBehavior": "selectWord",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.confirmOnExit": "hasChildProcesses",
+  "terminal.integrated.confirmOnKill": "editor",
+  "terminal.integrated.enableImages": true,
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.tabs.hideCondition": "never",
+  "terminal.integrated.tabs.location": "left",
+  "terminal.integrated.tabs.showActions": "singleTerminalOrNarrow",
+  "terminal.integrated.tabs.showActiveTerminal": "always",
+  "terminal.integrated.defaultLocation": "editor",
+  "terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose",
+  "terminal.integrated.allowChords": false,
+  "terminal.integrated.allowMnemonics": false,
+  "terminal.integrated.altClickMovesCursor": true,
+  "terminal.integrated.commandsToSkipShell": [
+    "workbench.action.terminal.clear",
+    "workbench.action.terminal.new",
+    "workbench.action.terminal.split",
+    "workbench.action.terminal.kill"
+  ],
+  "terminal.integrated.shellIntegration.enabled": true,
+  "terminal.integrated.shellIntegration.decorationsEnabled": "both",
+  "terminal.integrated.shellIntegration.history": 10000,
+  "terminal.integrated.shellIntegration.showWelcome": false,
+  "terminal.integrated.shellIntegration.suggestEnabled": true,
+  "terminal.integrated.shellIntegration.autoReplies": {
+    "Terminate batch job (Y/N)?": "Y",
+    "Do you want to continue?": "Y",
+    "Are you sure?": "Y",
+    "Continue?": "Y",
+    "Proceed?": "Y"
+  },
+  "terminal.integrated.profiles.linux": {
+    "zsh": {
+      "path": "/bin/zsh",
+      "args": [
+        "-l"
+      ],
+      "icon": "terminal-bash",
+      "color": "terminal.ansiGreen"
+    },
+    "zsh (login)": {
+      "path": "/bin/zsh",
+      "args": [
+        "-l"
+      ],
+      "icon": "terminal-bash",
+      "color": "terminal.ansiBlue"
+    },
+    "zsh (interactive)": {
+      "path": "/bin/zsh",
+      "args": [
+        "-i"
+      ],
+      "icon": "terminal-bash",
+      "color": "terminal.ansiYellow"
+    },
+    "bash": {
+      "path": "/bin/bash",
+      "args": [
+        "-l"
+      ],
+      "icon": "terminal-bash",
+      "color": "terminal.ansiCyan"
+    },
+    "fish": {
+      "path": "/usr/bin/fish",
+      "args": [
+        "-l"
+      ],
+      "icon": "terminal-bash",
+      "color": "terminal.ansiMagenta"
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.env.linux": {
+    "TERM": "xterm-256color",
+    "COLORTERM": "truecolor",
+    "SHELL": "/bin/zsh"
+  },
+  "terminal.integrated.inheritEnv": true,
+  "terminal.integrated.detectLocale": "auto",
+  "terminal.integrated.enablePersistentSessions": true,
+  "terminal.integrated.persistentSessionScrollback": 10000,
+  "terminal.integrated.showExitAlert": false,
+  "terminal.integrated.bellDuration": 0,
+  "terminal.integrated.unicodeVersion": "11",
+  "terminal.integrated.localEchoLatencyThreshold": 30,
+  "terminal.integrated.localEchoExcludePrograms": [
+    "vim",
+    "vi",
+    "nano",
+    "emacs",
+    "tmux",
+    "screen"
+  ],
+  "terminal.integrated.allowTransparency": true,
+  "terminal.integrated.opacity": 0.95,
+  // ===== EXTENSIONS SETTINGS =====
   "extensions.autoUpdate": "onlyEnabledExtensions",
-
-
+  // ===== EMMET SETTINGS =====
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": false,
+  // ===== ERROR LENS SETTINGS =====
   "errorLens.enabledDiagnosticLevels": [
     "warning",
     "error"
@@ -100,24 +280,52 @@
     "Grammarly",
     "eslint"
   ],
-
-
+  // ===== ESLINT SETTINGS =====
   "eslint.codeAction.showDocumentation": {
     "enable": true
   },
   "eslint.quiet": true,
-
   "eslint.rules.customizations": [
-    { "rule": "style/*", "severity": "off" },
-    { "rule": "format/*", "severity": "off" },
-    { "rule": "*-indent", "severity": "off" },
-    { "rule": "*-spacing", "severity": "off" },
-    { "rule": "*-spaces", "severity": "off" },
-    { "rule": "*-order", "severity": "off" },
-    { "rule": "*-dangle", "severity": "off" },
-    { "rule": "*-newline", "severity": "off" },
-    { "rule": "*quotes", "severity": "off" },
-    { "rule": "*semi", "severity": "off" }
+    {
+      "rule": "style/*",
+      "severity": "off"
+    },
+    {
+      "rule": "format/*",
+      "severity": "off"
+    },
+    {
+      "rule": "*-indent",
+      "severity": "off"
+    },
+    {
+      "rule": "*-spacing",
+      "severity": "off"
+    },
+    {
+      "rule": "*-spaces",
+      "severity": "off"
+    },
+    {
+      "rule": "*-order",
+      "severity": "off"
+    },
+    {
+      "rule": "*-dangle",
+      "severity": "off"
+    },
+    {
+      "rule": "*-newline",
+      "severity": "off"
+    },
+    {
+      "rule": "*quotes",
+      "severity": "off"
+    },
+    {
+      "rule": "*semi",
+      "severity": "off"
+    }
   ],
   "eslint.validate": [
     "javascript",
@@ -132,17 +340,24 @@
     "yaml",
     "toml"
   ],
-
+  // ===== GITHUB COPILOT SETTINGS =====
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
+    "plaintext": false,
     "markdown": true,
-    "plaintext": false
+    "scminput": false,
+    "python": false
   },
+  // ===== SPELL CHECKER SETTINGS =====
   "cSpell.allowCompoundWords": true,
   "cSpell.language": "en,en-US",
+  // ===== CSS SETTINGS =====
   "css.lint.hexColorLength": "ignore",
+  // ===== GITHUB ISSUES SETTINGS =====
   "githubIssues.workingIssueFormatScm": "#${issueNumberLabel}",
+  // ===== GITHUB PULL REQUESTS SETTINGS =====
   "githubPullRequests.fileListLayout": "tree",
+  // ===== GITLENS SETTINGS =====
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
@@ -189,111 +404,3490 @@
       "stash": true
     }
   },
+  // ===== I18N ALLY SETTINGS =====
   "i18n-ally.autoDetection": false,
   "i18n-ally.displayLanguage": "en",
   "i18n-ally.ignoredLocales": [],
+  // ===== ICONIFY SETTINGS =====
   "iconify.annotations": true,
   "iconify.inplace": true,
+  // ===== SVG SETTINGS =====
   "svg.preview.mode": "svg",
-
-
+  // ===== PRETTIER SETTINGS =====
   "prettier.enable": false,
   "prettier.printWidth": 200,
   "prettier.semi": false,
   "prettier.singleQuote": true,
-
-
-  "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.expand": false,
-  "explorer.fileNesting.patterns": {
-    "*.asax": "$(capture).*.cs, $(capture).*.vb",
-    "*.ascx": "$(capture).*.cs, $(capture).*.vb",
-    "*.ashx": "$(capture).*.cs, $(capture).*.vb",
-    "*.aspx": "$(capture).*.cs, $(capture).*.vb",
-    "*.bloc.dart": "$(capture).event.dart, $(capture).state.dart",
-    "*.c": "$(capture).h",
-    "*.cc": "$(capture).hpp, $(capture).h, $(capture).hxx",
-    "*.cjs": "$(capture).cjs.map, $(capture).*.cjs, $(capture)_*.cjs",
-    "*.component.ts": "$(capture).component.html, $(capture).component.spec.ts, $(capture).component.css, $(capture).component.scss, $(capture).component.sass, $(capture).component.less",
-    "*.cpp": "$(capture).hpp, $(capture).h, $(capture).hxx",
-    "*.cs": "$(capture).*.cs",
-    "*.cshtml": "$(capture).cshtml.cs",
-    "*.csproj": "*.config, *proj.user, appsettings.*, bundleconfig.json",
-    "*.css": "$(capture).css.map, $(capture).*.css",
-    "*.cxx": "$(capture).hpp, $(capture).h, $(capture).hxx",
-    "*.dart": "$(capture).freezed.dart, $(capture).g.dart",
-    "*.ex": "$(capture).html.eex, $(capture).html.heex, $(capture).html.leex",
-    "*.go": "$(capture)_test.go",
-    "*.java": "$(capture).class",
-    "*.js": "$(capture).js.map, $(capture).*.js, $(capture)_*.js",
-    "*.jsx": "$(capture).js, $(capture).*.jsx, $(capture)_*.js, $(capture)_*.jsx",
-    "*.master": "$(capture).*.cs, $(capture).*.vb",
-    "*.mjs": "$(capture).mjs.map, $(capture).*.mjs, $(capture)_*.mjs",
-    "*.module.ts": "$(capture).resolver.ts, $(capture).controller.ts, $(capture).service.ts",
-    "*.pubxml": "$(capture).pubxml.user",
-    "*.resx": "$(capture).*.resx, $(capture).designer.cs, $(capture).designer.vb",
-    "*.tex": "$(capture).acn, $(capture).acr, $(capture).alg, $(capture).aux, $(capture).bbl, $(capture).blg, $(capture).fdb_latexmk, $(capture).fls, $(capture).glg, $(capture).glo, $(capture).gls, $(capture).idx, $(capture).ind, $(capture).ist, $(capture).lof, $(capture).log, $(capture).lot, $(capture).out, $(capture).pdf, $(capture).synctex.gz, $(capture).toc, $(capture).xdv",
-    "*.ts": "$(capture).js, $(capture).d.ts.map, $(capture).*.ts, $(capture)_*.js, $(capture)_*.ts",
-    "*.tsx": "$(capture).ts, $(capture).*.tsx, $(capture)_*.ts, $(capture)_*.tsx",
-    "*.vbproj": "*.config, *proj.user, appsettings.*, bundleconfig.json",
-    "*.vue": "$(capture).*.ts, $(capture).*.js, $(capture).story.vue",
-    "*.xaml": "$(capture).xaml.cs",
-    "+layout.svelte": "+layout.ts,+layout.ts,+layout.js,+layout.server.ts,+layout.server.js,+layout.gql",
-    "+page.svelte": "+page.server.ts,+page.server.js,+page.ts,+page.js,+page.gql",
-    ".clang-tidy": ".clang-format, .clangd, compile_commands.json",
-    ".env": "*.env, .env.*, .envrc, env.d.ts",
-    ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
-    ".project": ".classpath",
-    "//": "Last update at 4/29/2023, 2:04:58 PM",
-    "BUILD.bazel": "*.bzl, *.bazel, *.bazelrc, bazel.rc, .bazelignore, .bazelproject, WORKSPACE",
-    "CMakeLists.txt": "*.cmake, *.cmake.in, .cmake-format.yaml, CMakePresets.json",
-    "I*.cs": "$(capture).cs",
-    "artisan": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, server.php, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, webpack.mix.js, windi.config.*",
-    "astro.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
-    "cargo.toml": ".clippy.toml, .rustfmt.toml, cargo.lock, clippy.toml, cross.toml, rust-toolchain.toml, rustfmt.toml",
-    "composer.json": ".php*.cache, composer.lock, phpunit.xml*, psalm*.xml",
-    "default.nix": "shell.nix",
-    "deno.json*": "*.env, .env.*, .envrc, api-extractor.json, deno.lock, env.d.ts, import-map.json, import_map.json, jsconfig.*, tsconfig.*, tsdoc.*",
-    "dockerfile": ".dockerignore, docker-compose.*, dockerfile*",
-    "flake.nix": "flake.lock",
-    "gatsby-config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, gatsby-browser.*, gatsby-node.*, gatsby-ssr.*, gatsby-transformer.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
-    "gemfile": ".ruby-version, gemfile.lock",
-    "go.mod": ".air*, go.sum",
-    "go.work": "go.work.sum",
-    "mix.exs": ".credo.exs, .dialyzer_ignore.exs, .formatter.exs, .iex.exs, .tool-versions, mix.lock",
-    "next.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, next-env.d.ts, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
-    "nuxt.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
-    "package.json": ".browserslist*, .circleci*, .commitlint*, .cz-config.js, .czrc, .dlint.json, .dprint.json, .editorconfig, .eslint*, .firebase*, .flowconfig, .github*, .gitlab*, .gitpod*, .huskyrc*, .jslint*, .lintstagedrc*, .markdownlint*, .node-version, .nodemon*, .npm*, .nvmrc, .pm2*, .pnp.*, .pnpm*, .prettier*, .releaserc*, .sentry*, .simple-git-hooks*, .stackblitz*, .styleci*, .stylelint*, .tazerc*, .textlint*, .tool-versions, .travis*, .versionrc*, .vscode*, .watchman*, .xo-config*, .yamllint*, .yarnrc*, Procfile, apollo.config.*, appveyor*, azure-pipelines*, bower.json, build.config.*, commitlint*, crowdin*, dangerfile*, dlint.json, dprint.json, eslint*, firebase.json, grunt*, gulp*, jenkins*, lerna*, lint-staged*, nest-cli.*, netlify*, nodemon*, npm-shrinkwrap.json, nx.*, package-lock.json, package.nls*.json, phpcs.xml, pm2.*, pnpm*, prettier*, pullapprove*, pyrightconfig.json, release-tasks.sh, release.config.*, renovate*, rollup.config.*, rspack*, simple-git-hooks*, stylelint*, tslint*, tsup.config.*, turbo*, typedoc*, unlighthouse*, vercel*, vetur.config.*, webpack*, workspace.json, xo.config.*, yarn*",
-    "pubspec.yaml": ".metadata, .packages, all_lint_rules.yaml, analysis_options.yaml, build.yaml, pubspec.lock, pubspec_overrides.yaml",
-    "pyproject.toml": ".pdm.toml, pdm.lock, pyproject.toml",
-    "quasar.conf.js": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, quasar.extensions.json, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
-    "readme*": "authors, backers*, changelog*, citation*, code_of_conduct*, codeowners, contributing*, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors*",
-    "remix.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, remix.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
-    "rush.json": ".browserslist*, .circleci*, .commitlint*, .cz-config.js, .czrc, .dlint.json, .dprint.json, .editorconfig, .eslint*, .firebase*, .flowconfig, .github*, .gitlab*, .gitpod*, .huskyrc*, .jslint*, .lintstagedrc*, .markdownlint*, .node-version, .nodemon*, .npm*, .nvmrc, .pm2*, .pnp.*, .pnpm*, .prettier*, .releaserc*, .sentry*, .simple-git-hooks*, .stackblitz*, .styleci*, .stylelint*, .tazerc*, .textlint*, .tool-versions, .travis*, .versionrc*, .vscode*, .watchman*, .xo-config*, .yamllint*, .yarnrc*, Procfile, apollo.config.*, appveyor*, azure-pipelines*, bower.json, build.config.*, commitlint*, crowdin*, dangerfile*, dlint.json, dprint.json, eslint*, firebase.json, grunt*, gulp*, jenkins*, lerna*, lint-staged*, nest-cli.*, netlify*, nodemon*, npm-shrinkwrap.json, nx.*, package-lock.json, package.nls*.json, phpcs.xml, pm2.*, pnpm*, prettier*, pullapprove*, pyrightconfig.json, release-tasks.sh, release.config.*, renovate*, rollup.config.*, rspack*, simple-git-hooks*, stylelint*, tslint*, tsup.config.*, turbo*, typedoc*, unlighthouse*, vercel*, vetur.config.*, webpack*, workspace.json, xo.config.*, yarn*",
-    "shims.d.ts": "*.d.ts",
-    "svelte.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, houdini.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, mdsvex.config.js, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vite.config.*, vitest.config.*, webpack.config.*, windi.config.*",
-    "vite.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
-    "vue.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*"
-  },
-
-
+  // ===== VIM SETTINGS =====
   "vim.smartRelativeLine": true,
   "vim.leader": "<space>",
   "vim.normalModeKeyBindings": [
-    { "before": ["<leader>", "e"], "commands": ["workbench.view.explorer"] },
-    { "before": ["g", "p", "d"], "commands": ["editor.action.peekDefinition"] },
-    { "before": ["g", "h"], "commands": ["editor.action.showDefinitionPreviewHover"] },
-    { "before": ["g", "i"], "commands": ["editor.action.goToImplementation"] },
-    { "before": ["g", "p", "i"], "commands": ["editor.action.peekImplementation"] },
-    { "before": ["g", "q"], "commands": ["editor.action.quickFix"] },
-    { "before": ["g", "r"], "commands": ["editor.action.referenceSearch.trigger"] },
-    { "before": ["g", "t"], "commands": ["editor.action.goToTypeDefinition"] },
-    { "before": ["g", "p", "t"], "commands": ["editor.action.peekTypeDefinition"] }
+    // ===== CORE NAVIGATION & FILE MANAGEMENT =====
+    {
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "commands": [
+        "workbench.view.explorer"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.showCommands"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "b"
+      ],
+      "commands": [
+        "workbench.action.showAllEditors"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.files.save"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n"
+      ],
+      "commands": [
+        "workbench.action.files.newUntitledFile"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "o"
+      ],
+      "commands": [
+        "workbench.action.files.openFile"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.files.saveAs"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.files.revert"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "x"
+      ],
+      "commands": [
+        "workbench.action.files.revealActiveFileInWindows"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "y"
+      ],
+      "commands": [
+        "workbench.action.files.copyPathOfActiveFile"
+      ]
+    },
+    // ===== ADVANCED CODE NAVIGATION & DEFINITIONS =====
+    {
+      "before": [
+        "g",
+        "p",
+        "d"
+      ],
+      "commands": [
+        "editor.action.peekDefinition"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "d"
+      ],
+      "commands": [
+        "editor.action.revealDefinition"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "h"
+      ],
+      "commands": [
+        "editor.action.showDefinitionPreviewHover"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "i"
+      ],
+      "commands": [
+        "editor.action.goToImplementation"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "p",
+        "i"
+      ],
+      "commands": [
+        "editor.action.peekImplementation"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "q"
+      ],
+      "commands": [
+        "editor.action.quickFix"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "editor.action.referenceSearch.trigger"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "t"
+      ],
+      "commands": [
+        "editor.action.goToTypeDefinition"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "p",
+        "t"
+      ],
+      "commands": [
+        "editor.action.peekTypeDefinition"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "o"
+      ],
+      "commands": [
+        "workbench.action.gotoSymbol"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "O"
+      ],
+      "commands": [
+        "workbench.action.showAllSymbols"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.gotoSymbolInWorkspace"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "j"
+      ],
+      "commands": [
+        "editor.action.marker.next"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "k"
+      ],
+      "commands": [
+        "editor.action.marker.prev"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.problems.focus"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "o",
+        "o"
+      ],
+      "commands": [
+        "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "o",
+        "n"
+      ],
+      "commands": [
+        "workbench.action.quickOpenNextRecentlyUsedEditorInGroup"
+      ]
+    },
+    // ===== SYSTEM PROGRAMMING CODE EDITING =====
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "c"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "u"
+      ],
+      "commands": [
+        "editor.action.uncommentLine"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "a"
+      ],
+      "commands": [
+        "editor.action.blockComment"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "m"
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "s"
+      ],
+      "commands": [
+        "editor.action.formatSelection"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "r",
+        "n"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "r",
+        "f"
+      ],
+      "commands": [
+        "editor.action.refactor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "u"
+      ],
+      "commands": [
+        "editor.action.removeDuplicateLines"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "l"
+      ],
+      "commands": [
+        "editor.action.deleteLines"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "u"
+      ],
+      "commands": [
+        "editor.action.transformToUppercase"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "l"
+      ],
+      "commands": [
+        "editor.action.transformToLowercase"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "t"
+      ],
+      "commands": [
+        "editor.action.transformToTitlecase"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "i",
+        "s"
+      ],
+      "commands": [
+        "editor.action.sortLinesAscending"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "i",
+        "r"
+      ],
+      "commands": [
+        "editor.action.sortLinesDescending"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "i",
+        "i"
+      ],
+      "commands": [
+        "editor.action.insertSnippet"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "i",
+        "f"
+      ],
+      "commands": [
+        "editor.action.insertSnippet"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "e",
+        "x"
+      ],
+      "commands": [
+        "editor.action.expandAbbreviation"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "e",
+        "r"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "e",
+        "m"
+      ],
+      "commands": [
+        "editor.action.extractMethod"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "e",
+        "v"
+      ],
+      "commands": [
+        "editor.action.extractVariable"
+      ]
+    },
+    // ===== SEARCH & REPLACE =====
+    {
+      "before": [
+        "<leader>",
+        "/"
+      ],
+      "commands": [
+        "actions.find"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "?"
+      ],
+      "commands": [
+        "editor.actions.findWithSelection"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "*"
+      ],
+      "commands": [
+        "editor.action.addSelectionToNextFindMatch"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "#"
+      ],
+      "commands": [
+        "editor.action.addSelectionToPreviousFindMatch"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "h",
+        "r"
+      ],
+      "commands": [
+        "editor.action.startFindReplaceAction"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "h",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.findInFiles"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "h",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.findInFiles"
+      ]
+    },
+    // ===== MULTI-CURSOR & SELECTION =====
+    {
+      "before": [
+        "<leader>",
+        "a"
+      ],
+      "commands": [
+        "editor.action.selectHighlights"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "l"
+      ],
+      "commands": [
+        "editor.action.addCursorToLineEnd"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "a"
+      ],
+      "commands": [
+        "editor.action.addCursorAbove"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "b"
+      ],
+      "commands": [
+        "editor.action.addCursorBelow"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "n"
+      ],
+      "commands": [
+        "editor.action.insertCursorAtEndOfEachLineSelected"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "u"
+      ],
+      "commands": [
+        "cursorUndo"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "r"
+      ],
+      "commands": [
+        "cursorRedo"
+      ]
+    },
+    // ===== SYSTEM DEBUGGING & PROFILING =====
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "b"
+      ],
+      "commands": [
+        "editor.debug.action.toggleBreakpoint"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "c"
+      ],
+      "commands": [
+        "editor.debug.action.conditionalBreakpoint"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "l"
+      ],
+      "commands": [
+        "editor.debug.action.logpoint"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.debug.start"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.debug.pause"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.debug.restart"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "q"
+      ],
+      "commands": [
+        "workbench.action.debug.stop"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "n"
+      ],
+      "commands": [
+        "workbench.action.debug.stepOver"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "i"
+      ],
+      "commands": [
+        "workbench.action.debug.stepInto"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "o"
+      ],
+      "commands": [
+        "workbench.action.debug.stepOut"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "e"
+      ],
+      "commands": [
+        "workbench.action.debug.evaluate"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.debug.watch"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "v"
+      ],
+      "commands": [
+        "workbench.action.debug.variables"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "S"
+      ],
+      "commands": [
+        "workbench.action.debug.callStack"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "t"
+      ],
+      "commands": [
+        "workbench.action.debug.threads"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.tasks.runTask"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "t"
+      ],
+      "commands": [
+        "workbench.action.tasks.test"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "b"
+      ],
+      "commands": [
+        "workbench.action.tasks.build"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.tasks.configureTaskRunner"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.tasks.showLog"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.tasks.terminate"
+      ]
+    },
+    // ===== PERFORMANCE MONITORING & PROFILING =====
+    {
+      "before": [
+        "<leader>",
+        "p",
+        "m"
+      ],
+      "commands": [
+        "workbench.action.openSettings"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "p",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.openGlobalKeybindings"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "p",
+        "e"
+      ],
+      "commands": [
+        "workbench.view.extensions"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "p",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.toggleDevTools"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "p",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.reloadWindowWithExtensionsDisabled"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "p",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.showRuntimeExtensions"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "p",
+        "t"
+      ],
+      "commands": [
+        "workbench.action.toggleSharedProcess"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "p",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.openProcessExplorer"
+      ]
+    },
+    // ===== ADVANCED GIT & VERSION CONTROL =====
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "s"
+      ],
+      "commands": [
+        "git.stage"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "u"
+      ],
+      "commands": [
+        "git.unstage"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "c"
+      ],
+      "commands": [
+        "git.commit"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "p"
+      ],
+      "commands": [
+        "git.push"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "l"
+      ],
+      "commands": [
+        "git.pull"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "d"
+      ],
+      "commands": [
+        "git.openChange"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "h"
+      ],
+      "commands": [
+        "git.openFile"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "r"
+      ],
+      "commands": [
+        "git.revert"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "b"
+      ],
+      "commands": [
+        "git.checkout"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "m"
+      ],
+      "commands": [
+        "git.merge"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "f"
+      ],
+      "commands": [
+        "workbench.view.scm"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "a"
+      ],
+      "commands": [
+        "git.stageAll"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "A"
+      ],
+      "commands": [
+        "git.unstageAll"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "i"
+      ],
+      "commands": [
+        "git.ignore"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "t"
+      ],
+      "commands": [
+        "git.tag"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "T"
+      ],
+      "commands": [
+        "git.deleteTag"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "S"
+      ],
+      "commands": [
+        "git.stash"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "P"
+      ],
+      "commands": [
+        "git.stashPop"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "L"
+      ],
+      "commands": [
+        "git.log"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "B"
+      ],
+      "commands": [
+        "git.branch"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "R"
+      ],
+      "commands": [
+        "git.rebase"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "F"
+      ],
+      "commands": [
+        "git.fetch"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "C"
+      ],
+      "commands": [
+        "git.clone"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "I"
+      ],
+      "commands": [
+        "git.init"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "D"
+      ],
+      "commands": [
+        "git.diff"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "H"
+      ],
+      "commands": [
+        "git.show"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "M"
+      ],
+      "commands": [
+        "git.merge"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "X"
+      ],
+      "commands": [
+        "git.reset"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "Y"
+      ],
+      "commands": [
+        "git.resetHard"
+      ]
+    },
+    // ===== SYSTEM TERMINAL & EXTERNAL TOOLS =====
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "e"
+      ],
+      "commands": [
+        "workbench.action.terminal.new"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.terminal.kill"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.terminal.clear"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.terminal.focus"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusPrevious"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusNext"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.terminal.split"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "m"
+      ],
+      "commands": [
+        "workbench.action.terminal.moveToEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.terminal.rename"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "d"
+      ],
+      "commands": [
+        "workbench.action.terminal.delete"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "t"
+      ],
+      "commands": [
+        "workbench.action.terminal.toggleTerminal"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "1"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusAtIndex1"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "2"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusAtIndex2"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "3"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusAtIndex3"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "4"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusAtIndex4"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "5"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusAtIndex5"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "6"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusAtIndex6"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "7"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusAtIndex7"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "8"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusAtIndex8"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "9"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusAtIndex9"
+      ]
+    },
+    // ===== CONTAINERIZATION & DEVOPS =====
+    {
+      "before": [
+        "<leader>",
+        "k",
+        "b"
+      ],
+      "commands": [
+        "workbench.action.tasks.build"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "k",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.tasks.runTask"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "k",
+        "t"
+      ],
+      "commands": [
+        "workbench.action.tasks.test"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "k",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.tasks.configureTaskRunner"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "k",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.tasks.showLog"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "k",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.tasks.terminate"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "k",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.tasks.showTasks"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "k",
+        "R"
+      ],
+      "commands": [
+        "workbench.action.tasks.restartTask"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "k",
+        "T"
+      ],
+      "commands": [
+        "workbench.action.tasks.terminateAll"
+      ]
+    },
+    // ===== PANEL & SIDEBAR MANAGEMENT =====
+    {
+      "before": [
+        "<leader>",
+        "v",
+        "e"
+      ],
+      "commands": [
+        "workbench.view.explorer"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "v",
+        "s"
+      ],
+      "commands": [
+        "workbench.view.search"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "v",
+        "g"
+      ],
+      "commands": [
+        "workbench.view.scm"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "v",
+        "d"
+      ],
+      "commands": [
+        "workbench.view.debug"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "v",
+        "x"
+      ],
+      "commands": [
+        "workbench.view.extensions"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "v",
+        "t"
+      ],
+      "commands": [
+        "workbench.view.terminal"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "v",
+        "p"
+      ],
+      "commands": [
+        "workbench.view.problems"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "v",
+        "o"
+      ],
+      "commands": [
+        "workbench.view.output"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "v",
+        "c"
+      ],
+      "commands": [
+        "workbench.view.console"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "v",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "v",
+        "b"
+      ],
+      "commands": [
+        "workbench.action.togglePanel"
+      ]
+    },
+    // ===== WINDOW & TAB MANAGEMENT =====
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.moveEditorLeftInGroup"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.moveEditorDownInGroup"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.moveEditorUpInGroup"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.moveEditorRightInGroup"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.splitEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "v"
+      ],
+      "commands": [
+        "workbench.action.splitEditorOrthogonal"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "o"
+      ],
+      "commands": [
+        "workbench.action.closeOtherEditors"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "n"
+      ],
+      "commands": [
+        "workbench.action.nextEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.previousEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "1"
+      ],
+      "commands": [
+        "workbench.action.openEditorAtIndex1"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "2"
+      ],
+      "commands": [
+        "workbench.action.openEditorAtIndex2"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "3"
+      ],
+      "commands": [
+        "workbench.action.openEditorAtIndex3"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "4"
+      ],
+      "commands": [
+        "workbench.action.openEditorAtIndex4"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "5"
+      ],
+      "commands": [
+        "workbench.action.openEditorAtIndex5"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "6"
+      ],
+      "commands": [
+        "workbench.action.openEditorAtIndex6"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "7"
+      ],
+      "commands": [
+        "workbench.action.openEditorAtIndex7"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "8"
+      ],
+      "commands": [
+        "workbench.action.openEditorAtIndex8"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "9"
+      ],
+      "commands": [
+        "workbench.action.openEditorAtIndex9"
+      ]
+    },
+    // ===== ZOOM & VIEW =====
+    {
+      "before": [
+        "<leader>",
+        "z",
+        "i"
+      ],
+      "commands": [
+        "workbench.action.zoomIn"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "z",
+        "o"
+      ],
+      "commands": [
+        "workbench.action.zoomOut"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "z",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.zoomReset"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "z",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.toggleFullScreen"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "z",
+        "m"
+      ],
+      "commands": [
+        "workbench.action.toggleMenuBar"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "z",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "z",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.togglePanel"
+      ]
+    },
+    // ===== SYSTEM QUICK ACTIONS =====
+    {
+      "before": [
+        "<leader>",
+        "q",
+        "q"
+      ],
+      "commands": [
+        "workbench.action.quit"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.reloadWindow"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q",
+        "d"
+      ],
+      "commands": [
+        "workbench.action.closeWindow"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q",
+        "n"
+      ],
+      "commands": [
+        "workbench.action.newWindow"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.saveWorkspaceAs"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.openWorkspace"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.openRecent"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.clearCommandHistory"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.showCommands"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.openGlobalKeybindings"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q",
+        "S"
+      ],
+      "commands": [
+        "workbench.action.openSettings"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q",
+        "e"
+      ],
+      "commands": [
+        "workbench.view.extensions"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q",
+        "t"
+      ],
+      "commands": [
+        "workbench.action.toggleDevTools"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q",
+        "R"
+      ],
+      "commands": [
+        "workbench.action.reloadWindowWithExtensionsDisabled"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.showRuntimeExtensions"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q",
+        "P"
+      ],
+      "commands": [
+        "workbench.action.openProcessExplorer"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q",
+        "T"
+      ],
+      "commands": [
+        "workbench.action.toggleSharedProcess"
+      ]
+    },
+    // ===== DATABASE & NETWORK DEBUGGING =====
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.terminal.new"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.terminal.split"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.terminal.kill"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.terminal.focus"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusPrevious"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusNext"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "t"
+      ],
+      "commands": [
+        "workbench.action.terminal.toggleTerminal"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.terminal.rename"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "d"
+      ],
+      "commands": [
+        "workbench.action.terminal.delete"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "m"
+      ],
+      "commands": [
+        "workbench.action.terminal.moveToEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.terminal.clear"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "1"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusAtIndex1"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "2"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusAtIndex2"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "3"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusAtIndex3"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "4"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusAtIndex4"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "5"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusAtIndex5"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "6"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusAtIndex6"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "7"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusAtIndex7"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "8"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusAtIndex8"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "9"
+      ],
+      "commands": [
+        "workbench.action.terminal.focusAtIndex9"
+      ]
+    },
+    // ===== SYSTEM MONITORING & LOGS =====
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.toggleDevTools"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.openProcessExplorer"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.reloadWindowWithExtensionsDisabled"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.showRuntimeExtensions"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "t"
+      ],
+      "commands": [
+        "workbench.action.toggleSharedProcess"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.openProcessExplorer"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.openSettings"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.openGlobalKeybindings"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "e"
+      ],
+      "commands": [
+        "workbench.view.extensions"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.showCommands"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "q"
+      ],
+      "commands": [
+        "workbench.action.quit"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "R"
+      ],
+      "commands": [
+        "workbench.action.reloadWindow"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "D"
+      ],
+      "commands": [
+        "workbench.action.closeWindow"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "N"
+      ],
+      "commands": [
+        "workbench.action.newWindow"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "S"
+      ],
+      "commands": [
+        "workbench.action.saveWorkspaceAs"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "L"
+      ],
+      "commands": [
+        "workbench.action.openWorkspace"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "W"
+      ],
+      "commands": [
+        "workbench.action.openRecent"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "C"
+      ],
+      "commands": [
+        "workbench.action.clearCommandHistory"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "H"
+      ],
+      "commands": [
+        "workbench.action.showCommands"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "K"
+      ],
+      "commands": [
+        "workbench.action.openGlobalKeybindings"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "S"
+      ],
+      "commands": [
+        "workbench.action.openSettings"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "E"
+      ],
+      "commands": [
+        "workbench.view.extensions"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "T"
+      ],
+      "commands": [
+        "workbench.action.toggleDevTools"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "R"
+      ],
+      "commands": [
+        "workbench.action.reloadWindowWithExtensionsDisabled"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "P"
+      ],
+      "commands": [
+        "workbench.action.showRuntimeExtensions"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "P"
+      ],
+      "commands": [
+        "workbench.action.openProcessExplorer"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "T"
+      ],
+      "commands": [
+        "workbench.action.toggleSharedProcess"
+      ]
+    }
   ],
   "vim.highlightedyank.enable": true,
-  "vim.highlightedyank.color": "#a9dc7660",
   "vim.highlightedyank.duration": 250,
-  "vim.useSystemClipboard": true
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.useWSL": false,
+  "vim.overrideCopy": false,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "after": [
+        "<BS>"
+      ]
+    },
+    {
+      "before": [
+        "<C-w>"
+      ],
+      "after": [
+        "<C-w>"
+      ]
+    },
+    {
+      "before": [
+        "<C-u>"
+      ],
+      "after": [
+        "<C-u>"
+      ]
+    },
+    {
+      "before": [
+        "<C-k>"
+      ],
+      "after": [
+        "<C-k>"
+      ]
+    },
+    {
+      "before": [
+        "<C-y>"
+      ],
+      "after": [
+        "<C-y>"
+      ]
+    },
+    {
+      "before": [
+        "<C-e>"
+      ],
+      "after": [
+        "<C-e>"
+      ]
+    },
+    {
+      "before": [
+        "<C-a>"
+      ],
+      "after": [
+        "<Home>"
+      ]
+    },
+    {
+      "before": [
+        "<C-e>"
+      ],
+      "after": [
+        "<End>"
+      ]
+    },
+    {
+      "before": [
+        "<C-f>"
+      ],
+      "after": [
+        "<Right>"
+      ]
+    },
+    {
+      "before": [
+        "<C-b>"
+      ],
+      "after": [
+        "<Left>"
+      ]
+    },
+    {
+      "before": [
+        "<C-n>"
+      ],
+      "after": [
+        "<Down>"
+      ]
+    },
+    {
+      "before": [
+        "<C-p>"
+      ],
+      "after": [
+        "<Up>"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "after": [
+        "<BS>"
+      ]
+    },
+    {
+      "before": [
+        "<C-w>"
+      ],
+      "after": [
+        "<C-w>"
+      ]
+    },
+    {
+      "before": [
+        "<C-u>"
+      ],
+      "after": [
+        "<C-u>"
+      ]
+    },
+    {
+      "before": [
+        "<C-k>"
+      ],
+      "after": [
+        "<C-k>"
+      ]
+    },
+    {
+      "before": [
+        "<C-y>"
+      ],
+      "after": [
+        "<C-y>"
+      ]
+    },
+    {
+      "before": [
+        "<C-e>"
+      ],
+      "after": [
+        "<C-e>"
+      ]
+    },
+    {
+      "before": [
+        "<C-a>"
+      ],
+      "after": [
+        "<Home>"
+      ]
+    },
+    {
+      "before": [
+        "<C-e>"
+      ],
+      "after": [
+        "<End>"
+      ]
+    },
+    {
+      "before": [
+        "<C-f>"
+      ],
+      "after": [
+        "<Right>"
+      ]
+    },
+    {
+      "before": [
+        "<C-b>"
+      ],
+      "after": [
+        "<Left>"
+      ]
+    },
+    {
+      "before": [
+        "<C-n>"
+      ],
+      "after": [
+        "<Down>"
+      ]
+    },
+    {
+      "before": [
+        "<C-p>"
+      ],
+      "after": [
+        "<Up>"
+      ]
+    }
+  ],
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-h>": false,
+    "<C-w>": false,
+    "<C-u>": false,
+    "<C-k>": false,
+    "<C-y>": false,
+    "<C-e>": false,
+    "<C-n>": false,
+    "<C-p>": false,
+    "<C-b>": false,
+    "<C-d>": false,
+    "<C-v>": false,
+    "<C-z>": false,
+    "<C-x>": false,
+    "<C-c>": false,
+    "<C-s>": false,
+    "<C-o>": false,
+    "<C-i>": false,
+    "<C-t>": false,
+    "<C-r>": false,
+    "<C-l>": false,
+    "<C-g>": false,
+    "<C-j>": false,
+    "<C-m>": false,
+    "<C-q>": false
+  },
+  // ===== PYTHON SETTINGS - DEEP PROGRAMMING OPTIMIZED =====
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}",
+    "${workspaceFolder}/**"
+  ],
+  "python.analysis.stubPath": "./typings",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.useLibraryCodeForTypes": true,
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.indexing": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.pytestParameters": true,
+  "python.analysis.packageIndexDepths": [
+    {
+      "name": "pandas",
+      "depth": 3
+    },
+    {
+      "name": "numpy",
+      "depth": 3
+    },
+    {
+      "name": "matplotlib",
+      "depth": 3
+    },
+    {
+      "name": "scikit-learn",
+      "depth": 3
+    },
+    {
+      "name": "tensorflow",
+      "depth": 2
+    },
+    {
+      "name": "torch",
+      "depth": 2
+    },
+    {
+      "name": "django",
+      "depth": 3
+    },
+    {
+      "name": "flask",
+      "depth": 3
+    },
+    {
+      "name": "fastapi",
+      "depth": 3
+    },
+    {
+      "name": "pydantic",
+      "depth": 3
+    }
+  ],
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.banditEnabled": true,
+  "python.linting.pydocstyleEnabled": true,
+  "python.linting.prospectorEnabled": false,
+  "python.linting.pylamaEnabled": false,
+  "python.linting.lintOnSave": true,
+  "python.linting.maxNumberOfProblems": 200,
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": [
+    "--line-length=88",
+    "--target-version=py311"
+  ],
+  "python.formatting.blackPath": "black",
+  "python.sortImports.args": [
+    "--profile=black",
+    "--line-length=88"
+  ],
+  "python.sortImports.path": "isort",
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestArgs": [
+    "-v",
+    "--tb=short",
+    "--strict-markers",
+    "--disable-warnings",
+    "--cov",
+    "--cov-report=term-missing",
+    "--cov-report=html"
+  ],
+  "python.testing.autoTestDiscoverOnSaveEnabled": true,
+  "python.testing.cwd": "${workspaceFolder}",
+  "python.terminal.activateEnvironment": true,
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "python.terminal.executeInFileDir": false,
+  "python.terminal.launchArgs": [],
+  "python.condaPath": "conda",
+  "python.pipenvPath": "pipenv",
+  "python.poetryPath": "poetry",
+  "python.venvPath": "${workspaceFolder}",
+  "python.venvFolders": [
+    "venv",
+    ".venv",
+    "env",
+    ".env"
+  ],
+  "python.analysis.include": [
+    "**/*.py"
+  ],
+  "python.analysis.exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    "**/.git",
+    "**/dist",
+    "**/build",
+    "**/.pytest_cache",
+    "**/venv",
+    "**/.venv",
+    "**/.mypy_cache",
+    "**/.tox",
+    "**/.nox",
+    "**/.coverage",
+    "**/htmlcov"
+  ],
+  "python.analysis.ignore": [
+    "**/node_modules",
+    "**/__pycache__",
+    "**/.pytest_cache",
+    "**/.mypy_cache"
+  ],
+  "python.analysis.logLevel": "Information",
+  "python.analysis.memory.keepLibraryAst": false,
+  "python.analysis.insidersChannel": "off",
+  "python.analysis.userFileIndexingLimit": 5000,
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportGeneralTypeIssues": "error",
+    "reportOptionalMemberAccess": "warning",
+    "reportOptionalSubscript": "warning",
+    "reportPrivateImportUsage": "warning",
+    "reportUnusedImport": "warning",
+    "reportUnusedClass": "warning",
+    "reportUnusedFunction": "warning",
+    "reportUnusedVariable": "warning",
+    "reportDuplicateImport": "warning",
+    "reportWildcardImportFromLibrary": "warning",
+    "reportMissingTypeStubs": "information",
+    "reportUnboundVariable": "error",
+    "reportUninitializedInstanceVariable": "error",
+    "reportIncompatibleMethodOverride": "error",
+    "reportIncompatibleVariableOverride": "error",
+    "reportMissingSuperCall": "error",
+    "reportReturnType": "error",
+    "reportArgumentType": "error",
+    "reportAssignmentType": "error",
+    "reportCallIssue": "error"
+  },
+  // ===== DART/FLUTTER SETTINGS =====
+  "dart.flutterSdkPath": "/tmp/flutter",
+  // ===== TELEMETRY SETTINGS =====
+  "telemetry.telemetryLevel": "off",
+  // ===== MAKEFILE SETTINGS =====
+  "makefile.configureOnOpen": true,
+  // ===== GO SETTINGS - DEEP PROGRAMMING OPTIMIZED =====
+  "go.toolsManagement.autoUpdate": true,
+  "go.useLanguageServer": true,
+  "go.addTags": {
+    "tags": "json",
+    "options": "json=omitempty",
+    "promptForTags": false,
+    "transform": "snakecase"
+  },
+  "gopls": {
+    "formatting.gofumpt": true,
+    "usePlaceholders": true,
+    "ui.semanticTokens": true,
+    "staticcheck": true,
+    "analyses": {
+      "fieldalignment": true,
+      "nilness": true,
+      "unusedparams": true,
+      "unusedwrite": true,
+      "useany": true
+    },
+    "codelenses": {
+      "gc_details": true,
+      "generate": true,
+      "regenerate_cgo": true,
+      "test": true,
+      "tidy": true,
+      "upgrade_dependency": true,
+      "vendor": true
+    },
+    "hints": {
+      "assignVariableTypes": true,
+      "compositeLiteralFields": true,
+      "compositeLiteralTypes": true,
+      "constantValues": true,
+      "functionTypeParameters": true,
+      "parameterNames": true,
+      "rangeVariableTypes": true
+    },
+    "build.directoryFilters": [
+      "-node_modules",
+      "-vendor"
+    ],
+    "ui.completion.usePlaceholders": true,
+    "ui.completion.completeUnimported": true,
+    "ui.completion.matcher": "Fuzzy",
+    "ui.diagnostic.staticcheck": true,
+    "ui.diagnostic.analyses": {
+      "asmdecl": true,
+      "assign": true,
+      "atomic": true,
+      "bools": true,
+      "buildtag": true,
+      "cgocall": true,
+      "composites": true,
+      "copylocks": true,
+      "deepequalerrors": true,
+      "errorsas": true,
+      "fieldalignment": true,
+      "httpresponse": true,
+      "ifaceassert": true,
+      "loopclosure": true,
+      "lostcancel": true,
+      "nilfunc": true,
+      "nilness": true,
+      "printf": true,
+      "shift": true,
+      "sigchanyzer": true,
+      "stdmethods": true,
+      "stringintconv": true,
+      "structtag": true,
+      "testinggoroutine": true,
+      "tests": true,
+      "unmarshal": true,
+      "unreachable": true,
+      "unsafeptr": true,
+      "unusedparams": true,
+      "unusedresult": true,
+      "unusedwrite": true,
+      "useany": true
+    }
+  },
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": [
+    "--fast",
+    "--timeout",
+    "5m",
+    "--fix"
+  ],
+  "go.testFlags": [
+    "-cover",
+    "-race",
+    "-count=1",
+    "-v",
+    "-s",
+    "-benchtime=5s",
+    "-timeout=5m"
+  ],
+  "go.testTimeout": "5m",
+  "go.coverOnSave": true,
+  "go.coverOnSingleTest": true,
+  "go.coverMode": "atomic",
+  "go.enableCodeLens": {
+    "runtest": true
+  },
+  "go.inlayHints.compositeLiteralFields": true,
+  "go.inlayHints.compositeLiteralTypes": true,
+  "go.inlayHints.functionTypeParameters": true,
+  "go.inlayHints.parameterNames": true,
+  "go.inlayHints.rangeVariableTypes": true,
+  "go.inlayHints.constantValues": true,
+  "go.inlayHints.assignVariableTypes": true,
+  "go.diagnostic.vulncheck": "Imports",
+  "go.toolsEnvVars": {
+    "GOFLAGS": "-buildvcs=false"
+  },
+  "go.buildOnSave": "package",
+  "go.lintOnSave": "package",
+  "go.vetOnSave": "package",
+  "go.installDependenciesWhenBuilding": true,
+  "go.useCodeSnippetsOnFunctionSuggest": true,
+  "go.useCodeSnippetsOnFunctionSuggestWithoutType": true,
+  "go.gocodeAutoBuild": false,
+  "go.gotoSymbol.includeImports": true,
+  "go.gotoSymbol.includeGoroot": false,
+  "go.docsTool": "godoc",
+  // ===== SYSTEM PROGRAMMING LANGUAGE SETTINGS =====
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[cpp]": {
+    "editor.wordBasedSuggestions": "off",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.stickyScroll.defaultModel": "foldingProviderModel",
+    "editor.suggest.insertMode": "replace",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always",
+      "source.fixAll": "always"
+    }
+  },
+  "[c]": {
+    "editor.wordBasedSuggestions": "off",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.stickyScroll.defaultModel": "foldingProviderModel",
+    "editor.suggest.insertMode": "replace",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always",
+      "source.fixAll": "always"
+    }
+  },
+  "[rust]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always",
+      "source.fixAll": "always"
+    }
+  },
+  "[assembly]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 8,
+    "editor.formatOnSave": false,
+    "editor.stickyScroll.enabled": true
+  },
+  "[makefile]": {
+    "editor.insertSpaces": false,
+    "editor.tabSize": 8,
+    "editor.formatOnSave": false,
+    "editor.stickyScroll.enabled": true
+  },
+  "[cmake]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.stickyScroll.enabled": true
+  },
+  "[javascript]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always",
+      "source.fixAll": "always"
+    }
+  },
+  "[typescript]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always",
+      "source.fixAll": "always"
+    },
+    "editor.suggest.insertMode": "replace",
+    "editor.wordBasedSuggestions": "off",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    },
+    "editor.parameterHints.enabled": true,
+    "editor.hover.delay": 300,
+    "editor.inlayHints.enabled": "on"
+  },
+  "[typescriptreact]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always",
+      "source.fixAll": "always"
+    },
+    "editor.suggest.insertMode": "replace",
+    "editor.wordBasedSuggestions": "off",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    },
+    "editor.parameterHints.enabled": true,
+    "editor.hover.delay": 300,
+    "editor.inlayHints.enabled": "on"
+  },
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always",
+      "source.fixAll": "always"
+    },
+    "editor.inlayHints.enabled": "on"
+  },
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always",
+      "source.fixAll": "always"
+    },
+    "editor.semanticHighlighting.enabled": true,
+    "editor.inlayHints.enabled": "on"
+  },
+  "[json]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true
+  },
+  "[yaml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true
+  },
+  "[toml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true
+  },
+  "[markdown]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    }
+  },
+  "[dockerfile]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true
+  },
+  "[shell]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true
+  },
+  "[bash]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true
+  },
+  "[zsh]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true
+  },
+  "[powershell]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true
+  },
+  "[sql]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true
+  },
+  "[html]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true
+  },
+  "[css]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true
+  },
+  "[scss]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true
+  },
+  "[less]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true
+  },
+  "[xml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true
+  },
+  "[ini]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true
+  },
+  "[properties]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true
+  },
+  "[conf]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true
+  },
+  "[config]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.stickyScroll.enabled": true
+  },
+  "[log]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": false,
+    "editor.stickyScroll.enabled": true,
+    "editor.wordWrap": "on"
+  },
+  "[plaintext]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": false,
+    "editor.stickyScroll.enabled": true,
+    "editor.wordWrap": "on"
+  },
+  // ===== TYPESCRIPT/JAVASCRIPT SETTINGS - DEEP PROGRAMMING =====
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.suggest.autoImports": true,
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.suggest.completeJSDocs": true,
+  "typescript.suggest.enabled": true,
+  "typescript.suggest.includeAutomaticOptionalChainCompletions": true,
+  "typescript.suggest.includeCompletionsForImportStatements": true,
+  "typescript.suggest.includeCompletionsWithSnippetText": true,
+  "typescript.suggest.jsdoc.generateReturns": true,
+  "typescript.suggest.paths": true,
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.validate.enable": true,
+  "typescript.format.enable": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.suggest.autoImports": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.suggest.completeJSDocs": true,
+  "javascript.suggest.enabled": true,
+  "javascript.suggest.includeAutomaticOptionalChainCompletions": true,
+  "javascript.suggest.includeCompletionsForImportStatements": true,
+  "javascript.suggest.includeCompletionsWithSnippetText": true,
+  "javascript.suggest.jsdoc.generateReturns": true,
+  "javascript.suggest.paths": true,
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifierEnding": "minimal",
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.preferences.includePackageJsonAutoImports": "auto",
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.variableTypes.enabled": true,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.enumMemberValues.enabled": true,
+  "javascript.validate.enable": true,
+  "javascript.format.enable": true,
+  // ===== PERFORMANCE OPTIMIZATIONS FOR LARGE CODEBASES =====
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/__pycache__/**": true,
+    "**/.pytest_cache/**": true,
+    "**/.mypy_cache/**": true,
+    "**/.venv/**": true,
+    "**/venv/**": true,
+    "**/.env/**": true,
+    "**/dist/**": true,
+    "**/build/**": true,
+    "**/.next/**": true,
+    "**/out/**": true,
+    "**/.turbo/**": true
+  },
+  "search.exclude": {
+    "**/*.snap": true,
+    "**/*.svg": true,
+    "**/.git": true,
+    "**/.github": false,
+    "**/.nuxt": true,
+    "**/.output": true,
+    "**/.pnpm": true,
+    "**/.vscode": true,
+    "**/.yarn": true,
+    "**/assets": true,
+    "**/bower_components": true,
+    "**/dist/**": true,
+    "**/logs": true,
+    "**/node_modules": true,
+    "**/out/**": true,
+    "**/package-lock.json": true,
+    "**/pnpm-lock.yaml": true,
+    "**/public": true,
+    "**/temp": true,
+    "**/yarn.lock": true,
+    "**/CHANGELOG*": true,
+    "**/LICENSE*": true,
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/.mypy_cache": true,
+    "**/.venv": true,
+    "**/venv": true,
+    "**/*.pyc": true,
+    "**/*.pyo": true,
+    "**/*.pyd": true,
+    "**/.Python": true,
+    "**/go.sum": true,
+    "**/vendor": true
+  },
+  "accessibility.signals.terminalBell": {
+    "sound": "off"
+  },
+  "terminal.integrated.enableVisualBell": false,
+  "editor.guides.highlightActiveIndentation": true,
+  "settingsSync.ignoredExtensions": [
+    "google.gemini-cli-vscode-ide-companion"
+  ],
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "git.ignoreLimitWarning": true,
+  // ===== RUST-ANALYZER SETTINGS =====
+  "rust-analyzer.linkedProjects": [
+    "${workspaceFolder}/05-PROJECTS/01-backend-api/rust/rust-backend-api/Cargo.toml",
+    "${workspaceFolder}/05-PROJECTS/01-backend-api/rust/rust-backend-api-1/Cargo.toml",
+    "${workspaceFolder}/05-PROJECTS/01-backend-api/rust/deep-dive-system/rust-mini-tokio/Cargo.toml",
+    "${workspaceFolder}/05-PROJECTS/01-backend-api/rust/deep-dive-system/rust-proc-macros/Cargo.toml",
+    "${workspaceFolder}/05-PROJECTS/01-backend-api/rust/deep-dive-system/rust-zero-copy-proxy/Cargo.toml",
+    "${workspaceFolder}/05-PROJECTS/01-backend-api/rust/deep-dive-system/rust-raw-http/Cargo.toml",
+    "${workspaceFolder}/05-PROJECTS/01-backend-api/rust/deep-dive-system/rust-middleware-pattern/Cargo.toml",
+    "${workspaceFolder}/05-PROJECTS/01-backend-api/rust/deep-dive-system/rust-custom-pool/Cargo.toml",
+    "${workspaceFolder}/05-PROJECTS/02-database/01-crud-user/Cargo.toml",
+    "${workspaceFolder}/05-PROJECTS/02-database/02-todo-app/Cargo.toml",
+    "${workspaceFolder}/05-PROJECTS/02-database/03-blog-engine/Cargo.toml",
+    "${workspaceFolder}/05-PROJECTS/02-database/04-login-jwt/Cargo.toml",
+    "${workspaceFolder}/05-PROJECTS/02-database/05-e-commerce/Cargo.toml",
+    "${workspaceFolder}/05-PROJECTS/02-database/06-banking-system/Cargo.toml",
+    "${workspaceFolder}/05-PROJECTS/02-database/07-social-feed/Cargo.toml",
+    "${workspaceFolder}/05-PROJECTS/02-database/08-query-optimization/Cargo.toml",
+    "${workspaceFolder}/05-PROJECTS/02-database/09-realtime-notification/Cargo.toml",
+    "${workspaceFolder}/05-PROJECTS/02-database/10-migrations-system/Cargo.toml",
+    "${workspaceFolder}/05-PROJECTS/02-database/11-testing-system/Cargo.toml"
+  ],
+  "rust-analyzer.checkOnSave": true,
+  "rust-analyzer.check.command": "clippy",
+  "rust-analyzer.check.allTargets": true,
+  "rust-analyzer.check.extraArgs": [
+    "--",
+    "-D",
+    "warnings"
+  ],
+  "rust-analyzer.imports.granularity.group": "module",
+  "rust-analyzer.assist.importMergeBehaviour": "module",
+  "rust-analyzer.cargo.buildScripts.invocationStrategy": "per_workspace"
 }
-
 
